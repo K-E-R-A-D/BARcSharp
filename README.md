@@ -11,6 +11,6 @@ Although the tool itself may be far from perfect, it should be able to extract m
 
 -Next, open the command prompt, locate the BarcSharp.exe file, and then type "barcsharp [barsfiledirectory]" or "barcsharp [barsfile]" (without quotation marks [except it's a directory] and square brackets!)
 
-Example: barcsharp "C:\..\Sound\Resource\" or barchsarp doubutsugo_base.bars
+Example: barcsharp "C:\\..\Sound\\Resource\\" or barchsarp doubutsugo_base.bars
 
--The output file would be somewhere in <executablelocation>\\BARcSharp-output\\<barsfilename>
+-The output file(s) would be somewhere in <executablelocation>\\BARcSharp-output\\<barsfilename>
