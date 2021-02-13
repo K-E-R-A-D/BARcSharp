@@ -13,4 +13,4 @@ Although the tool itself may be far from perfect, it should be able to extract m
 
 Example: barcsharp "C:\..\Sound\Resource\" or barchsarp doubutsugo_base.bars
 
--The output file would be somewhere in <executablelocation>\\BARcSharp-output\<barsfilename>
+-The output file would be somewhere in <executablelocation>\\BARcSharp-output\\<barsfilename>
