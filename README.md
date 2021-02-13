@@ -14,3 +14,7 @@ Although the tool itself may be far from perfect, it should be able to extract m
 Example: barcsharp "C:\\..\Sound\\Resource\\" or barchsarp doubutsugo_base.bars
 
 -The output file(s) would be somewhere in <executablelocation>\\BARcSharp-output\\<barsfilename>
+
+# What's next after you get the .bwav files?
+
+you can play the .bwav files using a plugin called vgmstream for a foobar2000 player: https://www.foobar2000.org/components/view/foo_input_vgmstream
