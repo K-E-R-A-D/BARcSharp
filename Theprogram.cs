@@ -1,6 +1,8 @@
 /*i have strained my head for the development of this tool.
 As such, i doubt if i'm going to improve, or fix the bugs any further at this point as i also lost my drive to do so.
-HOWEVER, in light of this, you are free to modify, even distribute the code, and / or improve the code on your own*/
+HOWEVER, in light of this, you are free to modify, even distribute the code, and / or improve the code on your own.
+Oh one last thing, if you wish to compile, or build the program, only build the program in C# 6 and above (preferably the latest one)
+because of use of string interpolations.*/
 
 using System;
 using System.IO;
