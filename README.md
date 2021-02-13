@@ -17,4 +17,4 @@ Example: barcsharp "C:\\..\Sound\\Resource\\" or barchsarp doubutsugo_base.bars
 
 # What's next after you get the .bwav files?
 
-you can play the .bwav files using a plugin called vgmstream for a foobar2000 player: https://www.foobar2000.org/components/view/foo_input_vgmstream
+you can play the .bwav files using a plugin called vgmstream for a foobar2000 player: https://www.foobar2000.org/components/view/foo_input_vgmstream , and you can even convert them to .wav files
