@@ -8,6 +8,8 @@ Although the tool itself may be far from perfect, it should be able to extract m
 # How to use
 
 -Since the release in a .zip file, extract all the contents first.
+
 -Next, open the command prompt, locate the BarcSharp.exe file, and then type "barcsharp [barsfiledirectory]" or "barcsharp [barsfile]" (without quotation marks [except it's a directory] and square brackets!)
 Example: barcsharp "C:\..\Sound\Resource\" or barchsarp doubutsugo_base.bars
+
 -The output file would be somewhere in <executablelocation>\\BARcSharp-output\<barsfilename>
