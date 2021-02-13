@@ -1,4 +1,8 @@
-﻿using System;
+/*i have strained my head for the development of this tool.
+as such, i doubt if i'm going to improve, or fix the bugs any further at this point
+HOWEVER, in light of this, you are free to modify, even distribute the code, and / or improve the code on your own*/
+
+using System;
 using System.IO;
 using System.Text;
 using System.Collections.Generic;
