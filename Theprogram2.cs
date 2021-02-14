@@ -31,7 +31,7 @@ class method_house //this is a class that will house a number of methods
 		return ((dir & FileAttributes.Directory) == FileAttributes.Directory) ? true : false;
 	}
 
-	public List<int> get_amta_offset(ref int[] offsets, ref int amta_count) //a method to get offsets for AMTA, where the AMTA tag is located
+	public List<int> get_amta_offset(ref int[] offsets, ref uint amta_count) //a method to get offsets for AMTA, where the AMTA tag is located
 	{
 		int i, j, k;
 		int amta_number;
@@ -74,7 +74,7 @@ class method_house //this is a class that will house a number of methods
 	result: return amta_offset;
 	}
 
-	public List<int> get_bwav_offset(ref int[] offsets, ref int amta_count) //a method to get offsets for BWAV, where the BWAV file is located
+	public List<int> get_bwav_offset(ref int[] offsets, ref uint amta_count) //a method to get offsets for BWAV, where the BWAV file is located
 	{
 		int i, j, k;
 		int amta_number;
@@ -117,7 +117,7 @@ class method_house //this is a class that will house a number of methods
 	result: return bwav_offset;
 	}
 
-	public List<string> get_amta_name_with_offset(ref byte[] data, ref string file_name_ext, int i, ref int amta_count) //this is a method to get the AMTA tags based on the available offset
+	public List<string> get_amta_name_with_offset(ref byte[] data, ref string file_name_ext, int i, ref uint amta_count) //this is a method to get the AMTA tags based on the available offset
 	{
 		int offsetnamestart;
 		int amta_number;
@@ -171,7 +171,7 @@ class method_house //this is a class that will house a number of methods
 	outside: return name;
 	}
 
-	public List<byte[]> get_bwav_array_with_offset(ref byte[] data, int i, ref int amta_count) //this is a method to get the BWAV files based on the available offset
+	public List<byte[]> get_bwav_array_with_offset(ref byte[] data, int i, ref uint amta_count) //this is a method to get the BWAV files based on the available offset
 	{
 		int k;
 		byte[] bwav = new byte[] { };
@@ -224,6 +224,26 @@ class method_house //this is a class that will house a number of methods
 	outside: return bwav_array;
 	}
 
+	public uint get_amta_count(ref uint[] the_amta_count)
+    {
+		string number = "";
+		string joined = "";
+		uint the_amta_number;
+		string[] array_number = new string[4];
+
+		for (int i = 0; i < the_amta_count.Length; i++)
+        {
+			number = String.Format("{0:X2}", the_amta_count[i]);
+			array_number.SetValue(number, i);
+		}
+
+		joined = String.Join("", array_number);
+
+		the_amta_number = Convert.ToUInt32(joined, 16);
+
+		return the_amta_number;
+    }
+
 	~method_house() //not sure if i called the destructor right
 	{
 		Console.WriteLine("the work is completed!");
@@ -273,12 +293,18 @@ class theprogram
 				Console.WriteLine("\n{0} is a .bars file", file_name_ext);
 				Console.WriteLine("the .bars file size (in B): {0}\n", data.Length);
 
-				int amta_count = 0;
+				uint amta_count;
 				int bwav_count = 0;
 
-				for (int i = 0; i < data.Length; i++) //first things first, let's check how many AMTA and BWAV it has
+				uint[] the_amta_count = new uint[4];
+				the_amta_count.SetValue(data[15], 0);
+				the_amta_count.SetValue(data[14], 1);
+				the_amta_count.SetValue(data[13], 2);
+				the_amta_count.SetValue(data[12], 3);
+				amta_count = obj.get_amta_count(ref the_amta_count);
+
+				for (int i = 0; i < data.Length; i++) //first things first, let's check how many BWAV it has
 				{
-					if (data[i] == 65 && data[i + 1] == 77 && data[i + 2] == 84 && data[i + 3] == 65) amta_count++;
 					if (data[i] == 66 && data[i + 1] == 87 && data[i + 2] == 65 && data[i + 3] == 86) bwav_count++;
 				}
 
@@ -294,8 +320,8 @@ class theprogram
 					List<int> bwav_offset; //an int typed List that will contain BWAV offsets
 					int i;
 					int[] offsets = new int[] { };
-					int offset_length = (amta_count * 4) * 2;
-					int offset_start = 16 + (amta_count * 4);
+					int offset_length = (int) (amta_count * 4) * 2;
+					int offset_start = (int) (16 + (amta_count * 4));
 
 					Array.Resize(ref offsets, offset_length);
 
@@ -345,7 +371,7 @@ class theprogram
 					Console.WriteLine("\n{0} is a .bars file", file_name_ext);
 					Console.WriteLine("the .bars file size (in B): {0:#.###}\n", data.Length);
 
-					int amta_count = 0;
+					uint amta_count = Convert.ToUInt32(data[12]);
 					int bwav_count = 0;
 
 					for (int i = 0; i < data.Length; i++) //first things first, let's check how many AMTA and BWAV it has
@@ -366,8 +392,8 @@ class theprogram
 						List<int> bwav_offset;
 						int i;
 						int[] offsets = new int[] { };
-						int offset_length = (amta_count * 4) * 2;
-						int offset_start = 16 + (amta_count * 4);
+						int offset_length = (int) (amta_count * 4) * 2;
+						int offset_start = (int) (16 + (amta_count * 4));
 
 						Array.Resize(ref offsets, offset_length);
 
