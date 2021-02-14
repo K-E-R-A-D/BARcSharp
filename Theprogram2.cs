@@ -371,12 +371,18 @@ class theprogram
 					Console.WriteLine("\n{0} is a .bars file", file_name_ext);
 					Console.WriteLine("the .bars file size (in B): {0:#.###}\n", data.Length);
 
-					uint amta_count = Convert.ToUInt32(data[12]);
+					uint amta_count;
 					int bwav_count = 0;
+
+					uint[] the_amta_count = new uint[4];
+					the_amta_count.SetValue(data[15], 0);
+					the_amta_count.SetValue(data[14], 1);
+					the_amta_count.SetValue(data[13], 2);
+					the_amta_count.SetValue(data[12], 3);
+					amta_count = obj.get_amta_count(ref the_amta_count);
 
 					for (int i = 0; i < data.Length; i++) //first things first, let's check how many AMTA and BWAV it has
 					{
-						if (data[i] == 65 && data[i + 1] == 77 && data[i + 2] == 84 && data[i + 3] == 65) amta_count++;
 						if (data[i] == 66 && data[i + 1] == 87 && data[i + 2] == 65 && data[i + 3] == 86) bwav_count++;
 					}
 
