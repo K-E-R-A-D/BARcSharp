@@ -1,4 +1,10 @@
-﻿using System;
+/*this is the second version of Theprogram.cs.
+It is rather, an "improved" version and featuring shorter lines for efficiency reason
+and also better naming of a method and some variables (use of underscore).
+Much like the previous version, if you wish to compile, or build the program, only build the program in C# 6 and above (but not sure which .NET version so, preferably the latest one)
+because of use of string interpolations.*/
+
+using System;
 using System.IO;
 using System.Text;
 using System.Collections.Generic;
