@@ -1,4 +1,4 @@
-/*this is the second version of Theprogram.cs , and is the latest version of the code.
+/*this is the second version of Theprogram.cs .
 It is rather, an "improved" version and featuring shorter lines for efficiency reason
 and also better naming of a method and some variables (use of underscore).
 Much like the previous version:
