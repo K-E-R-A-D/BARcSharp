@@ -1,4 +1,15 @@
-﻿using System;
+/*Here is the third version of Theprogram.cs , and is the latest version used in the latest release.
+This release should fix the way how getting the file name in get_name_from_amta_array method,
+especially of getting the file name on a "complex" or longer AMTA array.
+
+Again, much like the previous version:
+
+-You are free to modify, even distribute the code, and / or improve the code on your own, even use them for your own projects.
+
+-if you wish to compile, or build the program, only build the program in C# 6 and above (but not sure which .NET version so, preferably the latest one)
+because of use of string interpolations.*/
+
+using System;
 using System.IO;
 using System.Text;
 using System.Collections.Generic;
