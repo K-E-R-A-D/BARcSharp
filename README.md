@@ -13,7 +13,7 @@ Now that the tool itself should be close to perfect, it should be able to extrac
 
 Example: barcsharp "C:\\..\Sound\\Resource\\" or barchsarp doubutsugo_base.bars
 
--The output file(s) would be somewhere in [executablelocation]\\BARcSharp-output\\[barsfilename]
+-The output file(s) would be somewhere in [executablelocation]\\BARcSharp-output\\[barsfilename]\\
 
 # What's next after you get the .bwav files?
 
