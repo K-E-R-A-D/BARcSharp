@@ -21,4 +21,4 @@ you can play the .bwav files using a plugin called vgmstream for a foobar2000 pl
 
 # A warning that must not to be ignored
 
--DO NOT attempt to move the executable file alone without the DLLs. Those DLLs are the working components in order to run the program.
+-DO NOT attempt to move the executable file alone without the DLLs. Those DLLs are the working components in order to run the program. The same applies to when you extract the contents from the .zip file, DO NOT just extract the executable alone without the DLLs
