@@ -19,6 +19,6 @@ Example: barcsharp "C:\\..\Sound\\Resource\\" or barchsarp doubutsugo_base.bars
 
 you can play the .bwav files using a plugin called vgmstream for a foobar2000 player: https://www.foobar2000.org/components/view/foo_input_vgmstream , and you can even convert them to .wav files
 
-# A warning that must not to be ignored
+# A warning that must not be ignored
 
 -DO NOT attempt to move the executable file alone without the DLLs. Those DLLs are the working components in order to run the program. The same applies to when you extract the contents from the .zip file, DO NOT just extract the executable alone without the DLLs.
