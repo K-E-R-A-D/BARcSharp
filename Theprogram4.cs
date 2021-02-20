@@ -6,7 +6,7 @@ This code improves some checking if it's a directory or not.
 -if you wish to compile, or build the program, only build the program in C# 6 and above (but not sure which .NET version so, preferably the latest one)
 because of use of string interpolations.*/
 
-•using System;
+using System;
 using System.IO;
 using System.Text;
 using System.Collections.Generic;
