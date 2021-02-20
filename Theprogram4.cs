@@ -1,5 +1,5 @@
 /*The fourth version of Theprogram.cs , and is the latest version used in the latest release.
-This release improves some checking if it's a directory or not.
+This code improves some checking if it's a directory or not.
 
 -You are free to modify, even distribute the code, and / or improve the code on your own, even use them for your own projects.
 
