@@ -1,4 +1,4 @@
-/*Here is the third version of Theprogram.cs , and is the latest version used in the latest release.
+/*Here is the third version of Theprogram.cs.
 This code should fix the way how getting the file name in get_name_from_amta_array method,
 especially of getting the file name on a "complex" or longer AMTA array.
 
