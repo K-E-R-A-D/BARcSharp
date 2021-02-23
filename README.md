@@ -7,7 +7,7 @@ Now that the tool itself should be close to perfect, it should be able to extrac
 
 # Some requirement(s) to use the program?
 
-I'm not even very sure about this, but perhaps, just in case, you might need to install the .NET Desktop Runtime. Get it from here: https://dotnet.microsoft.com/download/dotnet/5.0
+I'm not even very sure about this, but perhaps, just in case, you might need to install the .NET Desktop Runtime. Get it from here (although .NET Runtime alone might have to suffice): https://dotnet.microsoft.com/download/dotnet/5.0
 
 # How to use
 
