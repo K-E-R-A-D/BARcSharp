@@ -5,6 +5,9 @@ Just my "casual" take on a tool development, inspired from this tool: https://gi
 
 Now that the tool itself should be close to perfect, it should be able to extract most (if not all) Switch .bars files, but i'll try to keep improving them sometimes
 
+# Some requirement(s) to use the program?
+I'm not even very sure about this, but perhaps, just in case, you might need to install the .NET Desktop Runtime here: https://dotnet.microsoft.com/download/dotnet/5.0
+
 # How to use
 
 -Since the release in a .zip file, extract all the contents first.
