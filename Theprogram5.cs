@@ -385,7 +385,7 @@ class the_program
 
 					for (int i = 0; i < data.Length; i++) //first things first, let's check how many BWAV it has
 					{
-						if (data[i] == 66 && data[i + 1] == 87 && data[i + 2] == 65 && data[i + 3] == 86) bwav_count++;
+						if (data[i] == 66 && data[i + 1] == 87 && data[i + 2] == 65 && data[i + 3] == 86 && data[i + 4] == 255 && data[i + 5] == 254) bwav_count++;
 					}
 
 					List<string> name; //a List of filenames from AMTA
@@ -476,7 +476,7 @@ class the_program
 
 						for (int i = 0; i < data.Length; i++) //first things first, let's check how many AMTA and BWAV it has
 						{
-							if (data[i] == 66 && data[i + 1] == 87 && data[i + 2] == 65 && data[i + 3] == 86) bwav_count++;
+							if (data[i] == 66 && data[i + 1] == 87 && data[i + 2] == 65 && data[i + 3] == 86 && data[i + 4] == 255 && data[i + 5] == 254) bwav_count++;
 						}
 
 						List<string> name;
