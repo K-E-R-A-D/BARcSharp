@@ -189,7 +189,7 @@ class method_house //this is a class that will house a number of methods
 					}
 
 					offset_name_start = method_house.get_name_from_amta_array(ref amta_offset_name_start) + (uint)36;
-					names = new byte[] { };
+					names = Array.Empty<byte>();
 					amta_length = method_house.get_amta_length(ref amta_length_container);
 
 					for (j = 0; j < amta_length; j++)
@@ -232,7 +232,7 @@ class method_house //this is a class that will house a number of methods
 		int k;
 		byte[] bwav;
 		int bwavlength;
-		int bwavstart = 0;
+		int bwavstart;
 		int bwavend = 0;
 		int bwavindex;
 		int amta_number;
@@ -251,7 +251,7 @@ class method_house //this is a class that will house a number of methods
 				{
 					if (data[k] <= 255)
 					{
-						if (data[k] == 66 && data[k + 1] == 87 && data[k + 2] == 65 && data[k + 3] == 86) break;
+						if (data[k] == 66 && data[k + 1] == 87 && data[k + 2] == 65 && data[k + 3] == 86 && data[k + 4] == 255 && data[k + 5] == 254) break;
 						bwavend = k + 1;
 
 						if (k == data.Length - 1) break;
@@ -260,7 +260,7 @@ class method_house //this is a class that will house a number of methods
 
 				bwavlength = bwavend - bwavstart;
 
-				bwav = new byte[] { };
+				bwav = Array.Empty<byte>();
 
 				Array.Resize(ref bwav, bwavlength);
 
