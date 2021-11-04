@@ -1,5 +1,5 @@
 # BARcSharp
-A tool to extract the BWAV files from Switch .bars files (for AMTA v5 only, particularly found in a game Animal Crossing New Horizons), 100% written in C# !
+A tool to extract the BWAV files from Switch .bars files (for AMTA v5 only, particularly found in a game Animal Crossing New Horizons, also [presumably] Super Smash Bros Ultimate), 100% written in C# !
 
 Just my "casual" take on a tool development, inspired from this tool: https://github.com/jackz314/bars-to-bwav
 
